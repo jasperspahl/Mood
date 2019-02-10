@@ -1,4 +1,4 @@
-const scl = 40;
+const scl = 50;
 const age = 'Wie alt bist du';
 const mood = 'Wie fühlst du dich gerade';
 const wakeUpTime = 'Wann stehst du durchschnittlich auf';
