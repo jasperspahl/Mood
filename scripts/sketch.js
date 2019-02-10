@@ -45,7 +45,7 @@ function drawStuff() {
       //console.log("Schlecht");
     }
     rect(x,y,scl,scl);
-    if (y > height - scl) {
+    if (y >= height - scl) {
       y = 0;
       x += scl;
     } else {
