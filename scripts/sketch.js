@@ -1,4 +1,4 @@
-const scl = 20;
+const scl = 40;
 const age = 'Wie alt bist du';
 const mood = 'Wie fühlst du dich gerade';
 const wakeUpTime = 'Wann stehst du durchschnittlich auf';
@@ -6,7 +6,8 @@ const fallAsleepTime = 'Wann gehst du durchschnittlich ins Bett';
 
 let data;
 
-let ageCounter = [];
+let x = 0;
+let y = 0;
 
 
 
@@ -25,12 +26,6 @@ function gotData(stuff, tabletop) {
 }
 
 function drawStuff() {
-  for (var i = 0; i < data.length; i++) {
-    if (ageCounter[data[i][age]] !== 1) {
-      ageCounter[data[i][age]] = 1;
-    }
-
-  }
   noStroke();
   for (var i = 0; i < data.length; i++) {
     if (data[i][mood] == 'Super') {
@@ -49,7 +44,11 @@ function drawStuff() {
       fill(28, 32, 35);
       console.log("something else");
     }
-    rect(data[i][age]*scl,ageCounter[data[i][age]]*scl,scl,scl);
-    ageCounter[data[i][age]] ++;
+    rect(x,y,scl,scl);
+    y += scl;
+    if (y >=height) {
+      y = 0;
+      x += scl;
+    }
   }
 }
