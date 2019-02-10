@@ -46,7 +46,7 @@ function drawStuff() {
     }
     rect(x,y,scl,scl);
     y += scl;
-    if (y >= height - scl) {
+    if (y > height - scl) {
       y = 0;
       x += scl;
     }
