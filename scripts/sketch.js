@@ -29,19 +29,19 @@ function drawStuff() {
   noStroke();
   for (var i = 0; i < data.length; i++) {
     if (data[i][mood] == 'Super') {
-      fill(191, 37, 39);
+      fill(color('ffbd0059'));
       console.log("Super");
     } else if (data[i][mood] == 'Gut') {
-      fill(240, 92, 39);
+      fill(color('ffe54e20'));
       console.log("Gut");
     } else if (data[i][mood] == 'Ok') {
-      fill(242, 174,35);
+      fill(color('ffffa201'));
       console.log("Ok");
     } else if (data[i][mood] == 'Nicht so gut') {
-      fill(44, 61, 61);
+      fill(color('ff00766d'));
       console.log("Nicht so gut");
     } else{
-      fill(28, 32, 35);
+      fill(color('ff222222'));
       console.log("something else");
     }
     rect(x,y,scl,scl);
