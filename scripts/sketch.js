@@ -12,9 +12,9 @@ let y = 0;
 
 
 function setup() {
-  createCanvas(floor(windowWidth/scl)*scl, floor(windowHeight/scl)*scl);
+  createCanvas(350, 250);
   background(0);
-  createDiv('<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSExifFqvI6bCtTpxPNa55yEDBNDoH8sKLy-XWxqIb6ZWeBQ/viewform?embedded=true" width="640" height="1587" frameborder="0" marginheight="0" marginwidth="0">Wird geladen...</iframe>');
+  createDiv('<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSExifFqvI6bCtTpxPNa55yEDBNDoH8sKLy-XWxqIb6ZWeBQ/viewform?embedded=true" width="350" height="275" frameborder="0" marginheight="0" marginwidth="0">Wird geladen...</iframe>');
   Tabletop.init( { key: '1a3MGwN8YOrxZl2jkxgJRxJri29OYMW7G-MrG9_HEvLE',
                  callback: gotData,
                  simpleSheet: true } )
@@ -28,7 +28,7 @@ function gotData(stuff, tabletop) {
 
 function drawStuff() {
   noStroke();
-  for (var i = 0; i < data.length; i++) {
+  for (var i = data.length -1; i >= 0; i--) {
     if (data[i][mood] == 'Super') {
       fill(color('#bd0059'));
       //console.log("Super");
